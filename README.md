@@ -35,3 +35,6 @@ Added a DHCP Server, so the Windows 10 Client automatically assigns an IP addres
 
 We set a DHCP range because the server must know which DHCP IP address it can use for the clients. Windows 10 clients get an IP address from this range, like 172.16.0.100/200
 
+## Creating Users
+I used a PowerShell script to automatically add a larger number of users (1000 users) for my lab environment. The purpose of this script is to simulate a large company with many users. For further reference, I added my script file separately.
+
