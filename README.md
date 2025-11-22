@@ -7,7 +7,7 @@ Both machines are connected using VMware network adapters, and this shows how a 
 
 ## Network Diagram Explanation
 
-<img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Network%20Diagram.png?raw=true">
+<img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Network%20Tropology.png?raw=true">
 
 - This Diagram Shows my Active Directory setup. The Domain Controller (172.16.0.1) provides DNS, DHCP, Gateway to the Internal Networks. Windows 10 receives an IP from the DHCP scope (172.16.0.100-200) and uses the Domain Controller for both DNS and Internet routing. This setup shows a small corporate network environment.
 
