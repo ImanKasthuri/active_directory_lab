@@ -1,4 +1,4 @@
-# Active_Directory_Home_Lab
+# Active_Directory_Lab
 
 I built an Active Directory environment using VMware. This lab uses two virtual machines:
 - Windows Server 2022 - Domain Controller
