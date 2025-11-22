@@ -19,7 +19,7 @@ I created two network adapters:
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%201.png?raw=true">
 
-## Assighn Static IP address
+## Assign a Static IP address
 I assigned the static IP address to the internal network on the Domain Controller, so the server always has the same IP address and the client can reliably find it.
 - IP Address - 172.16.0.1
 - Subnet Mask - 255.255.255.0
@@ -46,7 +46,7 @@ I installed the Remote Access role on the Domain Controller, so the Client Windo
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%205.png?raw=true">
 
-## Adding DHCP Server to the Domain Controller
+## Adding a DHCP Server to the Domain Controller
 Added a DHCP Server, so the Windows 10 Client automatically assigns an IP address, DNS, and Gateway without manually setting it.
 - DHCP Range - 172.16.0.100/200
 
@@ -59,20 +59,20 @@ I used a PowerShell script to automatically add a larger number of users (1000 u
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%207.png?raw=true">
 
-## Fixing Windows 10 Client not Getting an Ip Address
+## Fixing Windows 10 Client not Getting an IP Address
 During the setup of my Windows 10 Client, the machine was receiving the APIPA Address 169.254.178.190. This indicates the client is not receiving DHCP from the Domain Controller.
 
 ### Issue
 
 - Typo issue in the Domain Controller Internal Network Adapter. I typed 172.160.0.1, but the correct IP Address was 172.16.0.1
-- DHCP Server missing the Router 003 option, this options tells the client what's the Gateway is 
+- The DHCP Server is missing the Router 003 option, which tells the client what the Gateway is 
 
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%209.png?raw=true">
 
 ### Fix
 
-- I manually added the missing DHCP Router 003 option, set to 172.16.0.1 and, then restarted the DHCP service.
+- I manually added the missing DHCP Router 003 option, set to 172.16.0.1 and then restarted the DHCP service.
 - I changed the Internal Network Adapter IP address to 172.16.0.1
 - Disabled the Internal Network Adapter for a few seconds and enabled it again
 - The next step was to verify DHCP Bindings, which means I checked that DHCP was bound to the Internal Network.
@@ -80,18 +80,19 @@ During the setup of my Windows 10 Client, the machine was receiving the APIPA Ad
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%208.png?raw=true">
 
-- After fixing the missing DHCP Router 003 option and typo mistake, Windows 10 client machine sucessfully received an IP address form the Domain Controller
-
+- After fixing the missing DHCP Router 003 option and typo mistake, the Windows 10 client machine successfully received an IP address from the Domain Controller
+  
  <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%2010.png?raw=true">
+ 
+## Verifying Network Connectivity
 
- ## Veryfying Network Connectivity
-I veryfied that my Windows 10 client was connected to the Domain Controller, I checked that Windows 10 client could reach the Domain Controller using Ping Command.
+I verified that my Windows 10 client was connected to the Domain Controller, and I checked that the Windows 10 client could reach the Domain Controller using the Ping Command.
 - Ping 172.16.0.1
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%2011.png?raw=true">
 
 ## Domain Join
-Finally I tested the AD connectivity through joining the Domain.
+Finally, I tested the AD connectivity by joining the Domain.
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%2012.png?raw=true">
 
