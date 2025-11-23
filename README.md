@@ -3,6 +3,7 @@
 I built an Active Directory environment using VMware. This lab uses two virtual machines:
 - Windows Server 2022 - Domain Controller
 - Windows 10 Client
+
 Both machines are connected using VMware network adapters, and this shows how a real internal corporate network works.
 
 ## Network Diagram Explanation
