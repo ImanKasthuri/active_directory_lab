@@ -87,19 +87,19 @@ During the setup of my Windows 10 client, the machine was receiving an APIPA add
  
 ## Verifying Network Connectivity
 
-I verified that my Windows 10 client was connected to the Domain Controller, and I checked that the Windows 10 client could reach the Domain Controller using the Ping Command.
+I verified that my Windows 10 client was connected to the Domain Controller, and I confirmed connectivity by successfully pinging the Domain Controller from the client.
 - Ping 172.16.0.1
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%2011.png?raw=true">
 
 ## Domain Join
-Finally, I tested the AD connectivity by joining the Domain.
+Finally, I tested the Active Directory connectivity by joining the Windows 10 client to the domain.
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%2012.png?raw=true">
 
 ## Conclusion
 
-This project helped me to understand how  a real Active Directory environment works, including DNS, DHCP, NAT, User Management, and Domain Joining. And also, I gained hands-on experience in troubleshooting network issues. Overall, this lab strengthened my foundational IT and Cybersecurity skills.
+This project helped me understand how a real Active Directory environment works, including DNS, DHCP, NAT, user management, and domain joining. I also gained hands-on experience troubleshooting network issues. Overall, this lab strengthened my foundational IT and cybersecurity skills.
 
 ## Credits
 
