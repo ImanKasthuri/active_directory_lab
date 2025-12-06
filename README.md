@@ -60,7 +60,7 @@ I used a PowerShell script to automatically add a large number of users (1,000 u
 
 <img src="https://github.com/ImanKasthuri/active_directory_lab/blob/main/screenshot/Screenshot%207.png?raw=true">
 
-## Fixing Windows 10 Client not Getting an IP Address
+## Fixing Windows 10 Client Not Receiving an IP Address
 During the setup of my Windows 10 client, the machine was receiving an APIPA address (169.254.178.190). This indicates that the client was not receiving a DHCP address from the Domain Controller.
 
 ### Issue
